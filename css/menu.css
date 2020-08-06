@@ -1,0 +1,49 @@
+#app {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	
+}
+.nav_flex {
+	display: none;
+	width: 100%;
+	justify-content: flex-end;
+}
+.nav_flex a {
+	padding: 5px;
+}
+.nav_option {
+	display: flex;
+	justify-content: flex-end;
+}
+.img_flex {
+	display: flex;
+	justify-content: flex-start;
+}
+.img_flex img{
+	width: 80%;
+}
+.parent_flex {
+	display: flex;
+	padding-bottom: 20px;
+}
+#changeColor {
+	display: none;
+	margin-bottom: 15px;
+	background-color: #FF0000;
+	color: white;
+}
+#username {
+	font-weight: bold;
+}
+.anim {
+	animation: beat 0.5s infinite linear alternate;
+}
+
+@keyframes beat {
+	from {
+		transform: scale(0.6)
+	}
+	to {
+		transform: scale(1);
+	}
+}

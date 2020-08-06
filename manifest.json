@@ -1,0 +1,26 @@
+  {
+    "name": "Ycoms",
+    "version": "1.0",
+    "description": "Ycoms chrome extension",
+    "manifest_version": 2,
+    "permissions": ["storage", "declarativeContent", "cookies", "https://ycoms-test.herokuapp.com/*", "https://*/*"],
+    "background": {
+    	"scripts": ["background.js"],
+    	"persistent": false
+    },
+    "page_action": {
+    	"default_popup": "menu.html"
+    },
+    "icons": {
+        "16": "./imgs/ycoms-y.png",
+        "32": "./imgs/ycoms-y.png",
+        "128": "./imgs/ycoms-y.png"
+    },
+ 	"content_scripts": [
+ 	 {
+    	"matches": ["https://www.youtube.com/watch?v=*"],
+    	"js": ["ejs.min.js", "spf.js", "undead.js"],
+        "run_at": "document_end"
+  	 }
+	]   
+  }
